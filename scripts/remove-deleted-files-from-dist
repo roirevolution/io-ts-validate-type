@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Inspired by https://stackoverflow.com/questions/11440332/in-bash-find-all-files-in-flat-directory-that-dont-exist-in-another-directory-t
+
+comm -23 <(find dist/* -name '*.js' 2>/dev/null | sed "s/^dist\///g" | sort | uniq) <(find src/* -name '*.ts' | sed "s/\.ts/.js/g" | sed "s/^src\///g" | sort | uniq) | xargs -I{} rm dist/{}

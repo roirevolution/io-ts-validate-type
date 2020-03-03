@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [[ $(git diff HEAD@{$1}..HEAD@{$2} -- package.json | wc -l) -gt 0 ]]; then
+  echo "Reinstalling node_modules because package.json has changed"
+  rm -rf node_modules
+  npm install
+fi
