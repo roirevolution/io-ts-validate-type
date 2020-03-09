@@ -8,7 +8,8 @@
       "allowJs": false,
       "noImplicitAny": true,
       "incremental": true,
-      "strictNullChecks": true
+      "strictNullChecks": true,
+      "declaration": true
   },
   "include": [
       "./src/**/*"
