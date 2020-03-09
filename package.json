@@ -1,6 +1,6 @@
 {
   "name": "@roi-revolution/io-ts-validate-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Example",
   "engines": {
     "node": "^13.0.0"
